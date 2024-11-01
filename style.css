@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #18181b;
+  color: #e4e4e7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: max-content;
+  font-family: Arial, sans-serif;
+}
+
+#game {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.5);
+  width: 320px;
+  margin-top: 50px;
+}
+
+#title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #f5f5f7;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+}
+
+#grid {
+  display: grid;
+  grid-template-columns: repeat(3, 83px);
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.grid-box {
+  width: 83px;
+  height: 83px;
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  font-size: 38px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.15s, box-shadow 0.3s;
+}
+
+.grid-box:hover {
+  background-color: #ffffff40;
+  transform: scale(1.1);
+  box-shadow: 0px 4px 12px #ffffff33;
+}
+
+.win {
+  animation: win-blink 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes win-blink {
+  from {
+    background-color: green;
+    color: #ffffff;
+  }
+  to {
+    background-color: darkgreen;
+  }
+}
+
+#status {
+  font-size: 20px;
+  color: #a3a3a6;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+}
+
+#reset {
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+#reset:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-10px);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+}
